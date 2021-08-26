@@ -18,14 +18,7 @@
                             Categories
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Development</a></li>
-                            <li><a class="dropdown-item" href="#">Business</a></li>
-                            <li><a class="dropdown-item" href="#">Finance & Accounting</a></li>
-                            <li><a class="dropdown-item" href="#">IT & Software</a></li>
-                            <li><a class="dropdown-item" href="#">Design</a></li>
-                            <li><a class="dropdown-item" href="#">Marketing</a></li>
-                            <li><a class="dropdown-item" href="#">Lifestyle</a></li>
-                            <li><a class="dropdown-item" href="#">Music</a></li>
+                            <li *ngFor="let category of categories"><a class="dropdown-item" href="#">{{category.name}}</a></li>
                         </ul>
                     </li>
                 </ul>

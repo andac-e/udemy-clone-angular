@@ -6,13 +6,7 @@
 <div class="row">
     <div class="col">
         <nav class="nav">
-            <a class="nav-link active text-dark fw-bold" aria-current="page" href="#">Python</a>
-            <a class="nav-link text-secondary fw-bold" href="#">Excel</a>
-            <a class="nav-link text-secondary fw-bold" href="#">Web Development</a>
-            <a class="nav-link text-secondary fw-bold" href="#">JavaScript</a>
-            <a class="nav-link text-secondary fw-bold" href="#">Data Science</a>
-            <a class="nav-link text-secondary fw-bold" href="#">AWS Certification</a>
-            <a class="nav-link text-secondary fw-bold" href="#">Drawing</a>
+            <a class="nav-link text-secondary fw-bold" aria-current="page" href="#" *ngFor="let category of categories">{{category.name}}</a> 
           </nav>
     </div>
 </div>
@@ -24,100 +18,27 @@
         <button type="button" class="btn btn-outline-dark rounded-0 fw-bold mb-5">Explore Python</button>
 
         <div class="row">
-        <div class="col-md-3">
-            <div class="card border-0" style="width: 14rem;">
-                <img src="https://img-c.udemycdn.com/course/240x135/1830530_7f5a_3.jpg" class="card-img-top"
-                    alt="...">
-                <div class="card-body">
-                    <a href="" class="text-decoration-none text-dark">
-                        <h6 class="card-title fw-bold">Komple ASP.NET Web Geliştirme Eğitimi|62 Saat|2019</h6>
-                    </a>
-                    <p class="my-0"><small class="text-muted">Engin Demiroğ</small></p>
-                    <p class="card-text text-warning fw-bold my-0">4.7
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <small class="text-muted fw-light">(26.756)</small>
-                    </p>
-                    <p class="card-text fw-bold">₺27,99 <small
-                            class="text-muted fw-light text-decoration-line-through"> ₺219,99</small></p>
-                            <span class="badge bg-warning text-dark">Bestseller</span>
+            <div class="col-md-3" *ngFor="let course of courses">
+                <div class="card border-0" style="width: 14rem;">
+                    <img src={{course.imagePath}} class="card-img-top">
+                    <div class="card-body px-0 py-1">
+                            <h6 class="card-title fw-bold">{{course.title}}</h6>
+                        <p class="my-0"><small class="text-muted">{{course.instructor}}</small></p>
+                        <p class="card-text text-warning fw-bold my-0">{{course.stars}}
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <small class="text-muted fw-light"> ({{course.student}})</small>
+                        </p>
+                        <p class="card-text fw-bold">₺{{course.discountedPrice}} <small
+                                class="text-muted fw-light text-decoration-line-through"> ₺{{course.price}}</small></p>
+                                
+                    <span class="badge bg-warning text-dark">Bestseller</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="col-md-3">
-            <div class="card border-0" style="width: 14rem;">
-                <img src="https://img-c.udemycdn.com/course/240x135/1830530_7f5a_3.jpg" class="card-img-top"
-                    alt="...">
-                <div class="card-body">
-                    <a href="" class="text-decoration-none text-dark">
-                        <h6 class="card-title fw-bold">Komple ASP.NET Web Geliştirme Eğitimi|62 Saat|2019</h6>
-                    </a>
-                    <p class="my-0"><small class="text-muted">Engin Demiroğ</small></p>
-                    <p class="card-text text-warning fw-bold my-0">4.7
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <small class="text-muted fw-light">(26.756)</small>
-                    </p>
-                    <p class="card-text fw-bold">₺27,99 <small
-                            class="text-muted fw-light text-decoration-line-through"> ₺219,99</small></p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3">
-            <div class="card border-0" style="width: 14rem;">
-                <img src="https://img-c.udemycdn.com/course/240x135/1830530_7f5a_3.jpg" class="card-img-top"
-                    alt="...">
-                <div class="card-body">
-                    <a href="" class="text-decoration-none text-dark">
-                        <h6 class="card-title fw-bold">Komple ASP.NET Web Geliştirme Eğitimi|62 Saat|2019</h6>
-                    </a>
-                    <p class="my-0"><small class="text-muted">Engin Demiroğ</small></p>
-                    <p class="card-text text-warning fw-bold my-0">4.7
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <small class="text-muted fw-light">(26.756)</small>
-                    </p>
-                    <p class="card-text fw-bold">₺27,99 <small
-                            class="text-muted fw-light text-decoration-line-through"> ₺219,99</small></p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3">
-            <div class="card border-0" style="width: 14rem;">
-                <img src="https://img-c.udemycdn.com/course/240x135/1830530_7f5a_3.jpg" class="card-img-top"
-                    alt="...">
-                <div class="card-body">
-                    <a href="" class="text-decoration-none text-dark">
-                        <h6 class="card-title fw-bold">Komple ASP.NET Web Geliştirme Eğitimi|62 Saat|2019</h6>
-                    </a>
-                    <p class="my-0"><small class="text-muted">Engin Demiroğ</small></p>
-                    <p class="card-text text-warning fw-bold my-0">4.7
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                        <small class="text-muted fw-light">(26.756)</small>
-                    </p>
-                    <p class="card-text fw-bold">₺27,99 <small
-                            class="text-muted fw-light text-decoration-line-through"> ₺219,99</small></p>
-                            
-                <span class="badge bg-warning text-dark">Bestseller</span>
-                </div>
-            </div>
-        </div>
         </div>
         
     </div>
